@@ -1,0 +1,5 @@
+$active: #3978EF;
+$black: #121212;
+$white: #fff;
+$grey: lighten($black, 50%);
+$light-grey: lighten($black, 85%);
