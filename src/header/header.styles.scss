@@ -1,0 +1,24 @@
+@import "../static/scss/variables.sccs";
+
+#header {
+    padding: 30px 60px;
+    background: $white;
+    border-bottom: 1px solid $light-grey;
+
+
+    #main-logo {
+        display: inline-block;
+        width: 110px;
+
+        &__status-text {
+            display: inline-block;
+            color: $grey;
+            font-size: 14px;
+            line-height: 14px;
+            padding: 3px 0 3px 10px;
+            margin: 0 0 0 15px;
+            vertical-align: top;
+            border-left: 1px solid $grey;
+        }
+    }
+}
