@@ -1,16 +1,19 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import { getStatusIcon } from '../helpers';
+
 // styles
 import './general-status.styles.scss';
 
-const GeneralStatus = () => {
+const GeneralStatus = props => {
+    const { general_status, general_status_msg } = props.data;
+
     return (
         <div className="general-state">
-            <span className="icon">
-                <FontAwesomeIcon icon={faCheck} />
-            </span>
-            <span className="text">All systems up and running!</span>
+            <div className={`general-state__icon status-${general_status}`}>
+                <FontAwesomeIcon icon={getStatusIcon(general_status)} />
+            </div>
+            <div className="general-state__text">{general_status_msg}</div>
         </div>
     );
 };
