@@ -5,14 +5,9 @@ import './accordion.styles.scss';
 const Accordion = props => {
     const renderItems = () => {
         const items = props.data.map((item, index) => {
-            console.log(item);
             return (
                 <li className="accordion-list__item" key={index}>
-                    <AccordionItem
-                        title={item.title}
-                        status={item.status}
-                        events={item.events}
-                    />
+                    <AccordionItem title={item.title} status={item.status} events={item.events} />
                 </li>
             );
         });

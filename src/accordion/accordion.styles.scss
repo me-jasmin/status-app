@@ -1,14 +1,14 @@
 @import "../static/scss/variables.sccs";
 
 .accordion-list {
-    list-style: none;
     margin: 0;
     padding: 0;
-    background-color: $white;
+    list-style: none;
+    overflow: hidden;
+    perspective: 1px;
     border-radius: 5px;
     border-collapse: collapse;
-    perspective: 1px;
-    overflow: hidden;
+    background-color: $white;
     box-shadow: 
         0 3px 2px rgba($black, 0.024),
         0 7px 5px rgba($black, 0.038),
@@ -55,6 +55,17 @@
         }
     }
 
+    &--disabled {    
+        #{$self}__line {
+            cursor: initial;
+            background-color: initial;
+    
+            &:hover {
+                background-color: initial;
+            }
+        }
+    }
+
     &__line {
         position: relative;
         z-index: 2;
@@ -79,8 +90,8 @@
         display: inline-block;
         width: 20px;
         height: 20px;
-        vertical-align: bottom;
         margin: 0 5px 0 0;
+        vertical-align: bottom;
         opacity: 0.6;
         will-change: transform;
         transition: transform 0.3s ease-in-out;
@@ -88,25 +99,23 @@
     }
 
     &__status {
-        font-size: 20px;
-        line-height: 20px;
+        width: 25px;
+        height: 25px;
+        padding: 8px;
+        margin: -4px 0 0;
+        border-radius: 50%;
+        box-sizing: border-box;
         float: right;
+        text-align: center;
+        font-size: 10px;
+        line-height: 10px;
+        color: $white;
 
-        &.status-no_issues {
-            color: #2bac76
-        }
-
-        &.status-maintenance {
-            color: #1264a3
-        }
-
-        &.status-incident {
-            color: #e2ac37
-        }
-
-        &.status-outage {
-            color: #cd2553
-        }
+        @each $item, $color in $status {
+            &.status-#{$item} {
+                background: $color;
+            }
+        };
     }
     
     &__inner {
@@ -120,13 +129,35 @@
     
     &__content {
         opacity: 0;
-        padding: 20px 30px;
+        padding: 20px 0;
         transform: translateY(-1rem);
         will-change: opacity, transform;
         transition: opacity 0.1s linear 0.5s, transform 0.1s ease 0.5s;
     }
-    
-    &__paragraph {
+}
+
+.timeline {
+    &__event {
+        display: flex;
+        position: relative;
+        width: 100%;
+        padding: 0 30px;
+        margin: 0 0 10px;
         color: $grey;
+        font-size: 14px;
+        line-height: 20px;
+        box-sizing: border-box;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    &__time {
+        width: 60px;
+    }
+
+    &__text {
+        flex: 1;
     }
 }
