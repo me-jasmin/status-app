@@ -3,3 +3,15 @@ $black: #121212;
 $white: #fff;
 $grey: lighten($black, 50%);
 $light-grey: lighten($black, 85%);
+
+$status-no_issues: #2bac76;
+$status-maintenance: #1264a3;
+$status-incident: #e2ac37;
+$status-outage: #cd2553;
+
+$status: (
+    no_issues: $status-no_issues,
+    maintenance: $status-maintenance,
+    incident: $status-incident,
+    outage: $status-outage
+);
