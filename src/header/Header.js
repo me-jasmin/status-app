@@ -1,6 +1,8 @@
 import React from 'react';
+
 // images
 import logo from '../static/images/viskan_logo.svg';
+
 // styles
 import './header.styles.scss';
 

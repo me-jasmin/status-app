@@ -12,7 +12,7 @@ import './main.styles.scss';
 const Main = props => {
     const [state, setState] = useState({
         data: {},
-        isLoading: true
+        isLoading: true,
     });
 
     useEffect(() => {
@@ -20,7 +20,7 @@ const Main = props => {
             const result = await axios('testAPI.json');
             setState({
                 data: result.data,
-                isLoading: false
+                isLoading: false,
             });
         };
         fetchData();

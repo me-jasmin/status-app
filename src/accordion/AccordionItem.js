@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import { getStatusIcon } from '../helpers';
 
 const AccordionItem = props => {
