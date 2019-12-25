@@ -1,8 +1,4 @@
-import {
-    faCheck,
-    faWrench,
-    faExclamation,
-} from '@fortawesome/free-solid-svg-icons';
+import { faCheck, faWrench, faExclamation } from '@fortawesome/free-solid-svg-icons';
 
 const getStatusIcon = status => {
     const statusList = {
