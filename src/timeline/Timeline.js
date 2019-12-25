@@ -6,8 +6,6 @@ import './timeline.styles.scss';
 const Timeline = props => {
     const { events, title } = props;
 
-    console.log(events, title);
-
     const renderTimeline = () => {
         return events.map((event, index) => {
             return (
