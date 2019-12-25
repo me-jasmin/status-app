@@ -4,24 +4,23 @@
     margin: 20px 0 60px;
 
     &__icon {
-        padding: 22px;
         width: 90px;
         height: 90px;
+        padding: 22px;
         margin: 0 auto 20px;
-        border-radius: 50%;
+        border-radius: 50% 50% 50% 20%;
+        background: $grey;
         box-sizing: border-box;
         font-size: 50px;
         line-height: 50px;
         text-align: center;
         color: $white;
-        background: $grey;
         box-shadow: 
             0 3px 2px rgba($grey, 0.024),
             0 7px 5px rgba($grey, 0.038),
             0 12px 10px rgba($grey, 0.05),
             0 22px 18px rgba($grey, 0.062),
-            0 42px 32px rgba($grey, 0.076),
-            0 80px 60px rgba($grey, 0.12)
+            0 30px 32px rgba($grey, 0.076)
         ;
 
         @each $item, $color in $status {
@@ -32,8 +31,7 @@
                     0 7px 5px rgba($color, 0.038),
                     0 12px 10px rgba($color, 0.05),
                     0 22px 18px rgba($color, 0.062),
-                    0 42px 32px rgba($color, 0.076),
-                    0 80px 60px rgba($color, 0.12)
+                    0 30px 32px rgba($color, 0.076)
                 ;
             }
         };
