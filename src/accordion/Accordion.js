@@ -1,21 +1,31 @@
 import React from 'react';
 import AccordionItem from './AccordionItem';
+
+// styles
 import './accordion.styles.scss';
 
 const Accordion = props => {
+    const { data, type } = props;
+
     const renderItems = () => {
-        const items = props.data.map((item, index) => {
+        return data.map((item, index) => {
             return (
-                <li className="accordion-list__item" key={index}>
-                    <AccordionItem title={item.title} status={item.status} events={item.events} />
-                </li>
+                <AccordionItem
+                    key={index}
+                    type={type}
+                    title={item.title}
+                    status={item.status}
+                    events={item.events}
+                />
             );
         });
-
-        return <ul className="accordion-list">{items}</ul>;
     };
 
-    return renderItems();
+    return (
+        <ul id={type} className="accordion">
+            {renderItems()}
+        </ul>
+    );
 };
 
 export default Accordion;
