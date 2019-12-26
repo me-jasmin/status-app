@@ -1,0 +1,48 @@
+@import "./variables.scss";
+
+@mixin status-color {
+    @each $item, $color in $status {
+        &.status-#{$item} {
+            background: $color;
+        }
+    };
+}
+
+@mixin status-color-shadow {
+    @each $item, $color in $status {
+        &.status-#{$item} {
+            background: $color;
+            box-shadow: 
+                0 3px 2px rgba($color, 0.024),
+                0 7px 5px rgba($color, 0.038),
+                0 12px 10px rgba($color, 0.05),
+                0 22px 18px rgba($color, 0.062),
+                0 30px 32px rgba($color, 0.076)
+            ;
+        }
+    };
+}
+
+@mixin status-icon($size, $shadow: false) {
+    display: table;
+    width: map-get($icon-dimensions, $size);
+    height: map-get($icon-dimensions, $size);
+    font-size: map-get($icon-font-size, $size);
+    line-height: map-get($icon-font-size, $size);
+    color: $white;
+    background: $grey;
+    border-radius: 50% 50% 50% 20%;
+    box-sizing: border-box;
+
+    @if $shadow {
+        @include status-color-shadow;
+    }
+
+    .icon {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    @include status-color;
+}

@@ -1,17 +1,34 @@
-@import "../static/scss/variables.sccs";
+@import "../static/scss/variables.scss";
+@import "../static/scss/mixins.scss";
 
 .timeline {
     &__event {
         display: flex;
         position: relative;
         box-sizing: border-box;
-        margin: 0 30px 10px;
         color: $grey;
         font-size: 14px;
         line-height: 20px;
 
-        &:last-child {
-            margin: 0 30px 0;
+        &__group__container {
+            padding: 15px 30px;
+            margin: 0 0 5px;
+            background-color: #ccc;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+
+        &__title {
+            width: 100%;
+            margin: 0 0 10px;
+        }
+
+        &__icon {
+            float: left;
+            margin: 0 5px 0 0;
+            @include status-icon(small);
         }
     }
 

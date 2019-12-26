@@ -1,5 +1,6 @@
-@import-normalize;
-@import "../static/scss/variables.sccs";
+@import-normalize; // scss-lint:disable Import
+@import "../static/scss/variables.scss";
+@import "../static/scss/helpers.scss";
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,600&display=swap');
 
 html {
@@ -20,4 +21,16 @@ body {
     max-width: 800px;
     padding: 40px;
     margin: 0 auto;
+}
+
+.content-section {
+    margin: 0 0 100px;
+}
+
+.section-title {
+    color: $grey;
+    font-size: 28px;
+    line-height: 38px;
+    font-weight: normal;
+    margin: 0 0 30px;
 }

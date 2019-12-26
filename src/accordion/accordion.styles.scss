@@ -1,4 +1,5 @@
-@import "../static/scss/variables.sccs";
+@import "../static/scss/variables.scss";
+@import "../static/scss/mixins.scss";
 
 .accordion {
     margin: 0;
@@ -7,7 +8,6 @@
     overflow: hidden;
     perspective: 1px;
     border-radius: 5px;
-    border-collapse: collapse;
     background-color: $white;
     box-shadow: 
         0 3px 2px rgba($black, 0.024),
@@ -82,6 +82,11 @@
             display: inline-block;
             color: $grey;
             font-weight: 600;
+
+            &__text {
+                display: inline-block;
+                margin: 2px 0 0;
+            }
         }
 
         &__icon {
@@ -97,23 +102,8 @@
         }
 
         &__status {
-            width: 25px;
-            height: 25px;
-            padding: 8px;
-            margin: -4px 0 0;
-            border-radius: 50% 50% 50% 20%;
-            box-sizing: border-box;
             float: right;
-            text-align: center;
-            font-size: 10px;
-            line-height: 10px;
-            color: $white;
-
-            @each $item, $color in $status {
-                &.status-#{$item} {
-                    background: $color;
-                }
-            };
+            @include status-icon(medium);
         }
 
         &__inner {
@@ -127,7 +117,6 @@
 
         &__content {
             opacity: 0;
-            padding: 20px 0;
             transform: translateY(-1rem);
             will-change: opacity, transform;
             transition: opacity 0.1s linear 0.5s, transform 0.1s ease 0.5s;

@@ -1,48 +1,15 @@
-@import "../static/scss/variables.sccs";
+@import "../static/scss/variables.scss";
+@import "../static/scss/mixins.scss";
 
 .general-state {
-    margin: 20px 0 60px;
-
     &__icon {
-        width: 90px;
-        height: 90px;
-        padding: 22px;
+        @include status-icon(large, true);
         margin: 0 auto 20px;
-        border-radius: 50% 50% 50% 20%;
-        background: $grey;
-        box-sizing: border-box;
-        font-size: 50px;
-        line-height: 50px;
-        text-align: center;
-        color: $white;
-        box-shadow: 
-            0 3px 2px rgba($grey, 0.024),
-            0 7px 5px rgba($grey, 0.038),
-            0 12px 10px rgba($grey, 0.05),
-            0 22px 18px rgba($grey, 0.062),
-            0 30px 32px rgba($grey, 0.076)
-        ;
-
-        @each $item, $color in $status {
-            &.status-#{$item} {
-                background: $color;
-                box-shadow: 
-                    0 3px 2px rgba($color, 0.024),
-                    0 7px 5px rgba($color, 0.038),
-                    0 12px 10px rgba($color, 0.05),
-                    0 22px 18px rgba($color, 0.062),
-                    0 30px 32px rgba($color, 0.076)
-                ;
-            }
-        };
     }
 
-    &__text {
+    .section-title {
         width: 80%;
         margin: 0 auto;
-        color: $grey;
-        font-size: 24px;
-        line-height: 30px;
         text-align: center;
     }
 }

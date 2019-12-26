@@ -15,3 +15,15 @@ $status: (
     incident: $status-incident,
     outage: $status-outage
 );
+
+$icon-dimensions: (
+    small: 15px,
+    medium: 25px,
+    large: 90px
+);
+
+$icon-font-size: (
+    small: 6px,
+    medium: 10px,
+    large: 50px
+);
