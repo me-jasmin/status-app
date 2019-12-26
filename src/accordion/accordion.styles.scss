@@ -8,15 +8,18 @@
     overflow: hidden;
     perspective: 1px;
     border-radius: 5px;
-    background-color: $white;
-    box-shadow: 
-        0 3px 2px rgba($black, 0.024),
-        0 7px 5px rgba($black, 0.038),
-        0 12px 10px rgba($black, 0.05),
-        0 22px 18px rgba($black, 0.062),
-        0 42px 32px rgba($black, 0.076),
-        0 80px 60px rgba($black, 0.12)
-    ;
+    
+    &#current-events {
+        background-color: $white;
+        box-shadow: 
+            0 3px 2px rgba($black, 0.024),
+            0 7px 5px rgba($black, 0.038),
+            0 12px 10px rgba($black, 0.05),
+            0 22px 18px rgba($black, 0.062),
+            0 42px 32px rgba($black, 0.076),
+            0 80px 60px rgba($black, 0.12)
+        ;
+    }
 
     &__item {
         $self: &;
@@ -44,11 +47,7 @@
             }
 
             #{$self}__line {
-                background-color: lighten($light-grey, 2%);
-
-                &:hover {
-                    background-color: lighten($light-grey, 4%);
-                }
+                background-color: lighten($light-grey, 4%);
             }
         }
 
@@ -69,12 +68,11 @@
             cursor: pointer;
             padding: 20px 30px;
             font-size: 18px;
-            background-color: $white;
             will-change: background-color;
             transition: background-color 0.2s ease;
 
             &:hover {
-                background-color: rgba($active, .05);
+                background-color: lighten($light-grey, 5%);
             }
         }
 

@@ -8,6 +8,14 @@
     };
 }
 
+@mixin status-background-color {
+    @each $item, $color in $status {
+        &.status-#{$item} {
+            background: rgba($color, .06);
+        }
+    };
+}
+
 @mixin status-color-shadow {
     @each $item, $color in $status {
         &.status-#{$item} {

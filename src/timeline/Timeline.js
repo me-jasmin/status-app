@@ -29,9 +29,9 @@ const Timeline = props => {
     };
 
     return (
-        <div className="timeline__event__group__container">
+        <div className={`timeline__event__group__container ${status ? `status-${status}` : ''}`}>
             {(title || status) && (
-                <div className="timeline__event__title">
+                <div className={`timeline__event__title ${status ? `status-${status}` : ''}`}>
                     {title && title}
                     {status && (
                         <span className={`timeline__event__icon status-${status}`}>
