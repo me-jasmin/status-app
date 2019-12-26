@@ -1,9 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import AccordionItem from './AccordionItem';
 
 // styles
 import './accordion.styles.scss';
+
+/*
+    @props
+    data: arrayOf(object)
+    type: string
+*/
 
 const Accordion = props => {
     const { data, type } = props;
@@ -30,3 +37,8 @@ const Accordion = props => {
 };
 
 export default Accordion;
+
+Accordion.propTypes = {
+    data: PropTypes.arrayOf(PropTypes.object),
+    type: PropTypes.string,
+};
