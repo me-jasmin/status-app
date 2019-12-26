@@ -1,7 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { Accordion } from '../accordion/';
 import Timeline from '../timeline';
+
+/*
+    @props
+    data: arrayOf(object)
+*/
 
 const CurrentEvents = props => {
     const { data } = props;
@@ -16,7 +22,15 @@ const CurrentEvents = props => {
         });
     });
 
-    return <Accordion type="current-events" data={transformedData} />;
+    return (
+        <section className="content-section">
+            <Accordion type="current-events" data={transformedData} />
+        </section>
+    );
 };
 
 export default CurrentEvents;
+
+CurrentEvents.propTypes = {
+    data: PropTypes.arrayOf(PropTypes.object),
+};

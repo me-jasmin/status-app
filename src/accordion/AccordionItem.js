@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { getStatusIcon } from '../helpers';
@@ -14,14 +15,20 @@ const AccordionItem = props => {
             }`}
         >
             <div
-                className="accordion__item__line"
+                className="accordion__item__line clearfix"
                 onClick={() => (events ? setIsOpen(!isOpen) : null)}
             >
                 {events && <span className="accordion__item__icon" />}
-                {title && <span className="accordion__item__title">{title}</span>}
+                {title && (
+                    <span className="accordion__item__title">
+                        <span className="accordion__item__title__text">{title}</span>
+                    </span>
+                )}
                 {status && (
                     <span className={`accordion__item__status status-${status}`}>
-                        <FontAwesomeIcon icon={getStatusIcon(status)} />
+                        <span className="icon">
+                            <FontAwesomeIcon icon={getStatusIcon(status)} />
+                        </span>
                     </span>
                 )}
             </div>
@@ -33,5 +40,10 @@ const AccordionItem = props => {
         </li>
     );
 };
-
 export default AccordionItem;
+
+AccordionItem.propTypes = {
+    title: PropTypes.string,
+    status: PropTypes.string,
+    events: PropTypes.node,
+};

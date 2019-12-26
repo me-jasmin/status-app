@@ -1,7 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { Accordion } from '../accordion/';
 import Timeline from '../timeline';
+
+/*
+    @props
+    data: arrayOf(object)
+*/
 
 const PastEvents = props => {
     const { data } = props;
@@ -12,7 +18,12 @@ const PastEvents = props => {
 
         if (item.service) {
             renderedEventGroup = item.service.map((service, index) => (
-                <Timeline title={service.title} events={service.events} key={index} />
+                <Timeline
+                    title={service.title}
+                    events={service.events}
+                    status={service.status}
+                    key={index}
+                />
             ));
         }
 
@@ -23,11 +34,15 @@ const PastEvents = props => {
     });
 
     return (
-        <div>
-            <h1>Past events</h1>
+        <section className="content-section">
+            <h1 className="section-title">Past Events</h1>
             <Accordion type="past-events" data={transformedData} />
-        </div>
+        </section>
     );
 };
 
 export default PastEvents;
+
+PastEvents.propTypes = {
+    data: PropTypes.arrayOf(PropTypes.object),
+};
