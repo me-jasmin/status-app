@@ -32,9 +32,9 @@ const Main = props => {
         <>
             <Header />
             <div className="page-wrapper">
-                <GeneralStatus data={state.data.status} />
-                <CurrentEvents data={state.data.current_events} />
-                <PastEvents data={state.data.past_events} />
+                {state.data.status && <GeneralStatus data={state.data.status} />}
+                {state.data.current_events && <CurrentEvents data={state.data.current_events} />}
+                {state.data.past_events && <PastEvents data={state.data.past_events} />}
             </div>
         </>
     );
