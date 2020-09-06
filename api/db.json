@@ -1,0 +1,172 @@
+{
+    "api": {
+        "status": {
+            "general_status": "incident",
+            "general_status_msg": "Most services running with minor issues and outages."
+        },
+        "current_events": [
+            {
+                "key": "Login/SSO",
+                "status": "no_issues",
+                "title": "Login/SSO"
+            },
+            {
+                "key": "Messaging",
+                "status": "no_issues",
+                "title": "Messaging"
+            },
+            {
+                "key": "Apps/Integrations/APIs",
+                "status": "maintenance",
+                "title": "Apps/Integrations/APIs",
+                "events": [
+                    {
+                        "time": "9:58 UTC",
+                        "text": "Maintenance started, some outages may occur"
+                    }
+                ]
+            },
+            {
+                "key": "Posts/Files",
+                "status": "no_issues",
+                "title": "Posts/Files"
+            },
+            {
+                "key": "Calls",
+                "status": "no_issues",
+                "title": "Calls"
+            },
+            {
+                "key": "Link Previews",
+                "status": "incident",
+                "title": "Link Previews",
+                "events": [
+                    {
+                        "time": "17:03",
+                        "text": "Outages may occur in EU region"
+                    }, 
+                    {
+                        "time": "17:26",
+                        "text": "Service started"
+                    }
+                ]
+            },
+            {
+                "key": "Search",
+                "status": "no_issues",
+                "title": "Search"
+            },
+            {
+                "key": "Workspace/Org Administration",
+                "status": "no_issues",
+                "title": "Notifications"
+            },
+            {
+                "key": "Connections",
+                "status": "outage",
+                "title": "Connections",
+                "events": [
+                    {
+                        "time": "6:12 UTC",
+                        "text": "Isuees discoverd"
+                    },
+                    {
+                        "time": "6:29 UTC",
+                        "text": "Problem pinpointed to ES cluster"
+                    },
+                    {
+                        "time": "6:49 UTC",
+                        "text": "Service started"
+                    }
+                ]
+            }
+        ],
+        "past_events": [
+            {
+                "date": "5. September, 2020",
+                "service": [
+                    {
+                        "key": "Posts/Files",
+                        "status": "maintenance",
+                        "title": "Posts/Files",
+                        "events": [
+                            {
+                                "time": "13:26 - 14:41 UTC",
+                                "text": "Monitoring starts reporting issues on some APIs"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "Notifications",
+                        "status": "incident",
+                        "title": "Notifications",
+                        "events": [
+                            {
+                                "time": "14:52 - 15:10 UTC",
+                                "text": "Restart of services has been attempted"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "Login/SSO",
+                        "status": "outage",
+                        "title": "Login/SSO",
+                        "events": [
+                            {
+                                "time": "15:06 - 15:41 UTC",
+                                "text": "As restart of services failed with desired result, we proceed with restart of servers"
+                            },
+                            {
+                                "time": "18:03 - 18:20 UTC",
+                                "text": "As restart of services failed with desired result, we proceed with restart of servers. Server maintenance started."
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "date": "6. September, 2020",
+                "service": [
+                    {
+                        "key": "Notifications",
+                        "status": "incident",
+                        "title": "Notifications",
+                        "events": [
+                            {
+                                "time": "06:12 - 06:16 UTC",
+                                "text": "Restart of services has been attempted"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "Link Previews",
+                        "status": "maintenance",
+                        "title": "Link Previews",
+                        "events": [
+                            {
+                                "time": "11:26 - 12:41 UTC",
+                                "text": "Monitoring starts reporting issues on some APIs, server maintenance started."
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "date": "7. September, 2020",
+                "service": [
+                    {
+                        "key": "Notifications",
+                        "status": "outage",
+                        "title": "Notifications",
+                        "events": [
+                            {
+                                "time": "06:12 - 06:16 UTC",
+                                "text": "Restart of services has been attempted"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
