@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 import AccordionItem from './AccordionItem';
 
-// styles
 import './accordion.styles.scss';
 
 /*

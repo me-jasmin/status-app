@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { getStatusIcon } from '../helpers';
 
-// styles
 import './general-status.styles.scss';
 
 /*

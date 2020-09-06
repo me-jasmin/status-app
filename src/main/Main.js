@@ -17,7 +17,7 @@ const Main = props => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const result = await axios('testAPI.json');
+            const result = await axios(process.env.REACT_APP_API);
             setState({
                 data: result.data,
                 isLoading: false,

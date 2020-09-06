@@ -1,5 +1,5 @@
-@import "../static/scss/variables.scss";
-@import "../static/scss/mixins.scss";
+@import "../scss/variables.scss";
+@import "../scss/mixins.scss";
 
 .timeline {
     &__event {
@@ -17,7 +17,7 @@
         }
 
         &__group__container {
-            margin: 0 0 20px;
+            margin: 0 0 10px;
             @include status-background-color;
 
             &:last-child {
@@ -57,5 +57,11 @@
 
     &__text {
         flex: 1;
+    }
+}
+
+#past-events {
+    .timeline__event__group__container:last-child {
+        margin: 0 0 20px;
     }
 }

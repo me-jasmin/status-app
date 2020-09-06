@@ -1,5 +1,5 @@
-@import "../static/scss/variables.scss";
-@import "../static/scss/mixins.scss";
+@import "../scss/variables.scss";
+@import "../scss/mixins.scss";
 
 .accordion {
     margin: 0;
@@ -8,27 +8,36 @@
     overflow: hidden;
     perspective: 1px;
     border-radius: 5px;
-    
+
+    &#past-events {
+        .accordion__item__line {
+            background-color: transparentize($black, .98);
+
+            &:hover {
+                background-color: transparentize($black, .95);
+            }
+        }
+    }
+
     &#current-events {
         background-color: $white;
-        box-shadow: 
+        box-shadow:
             0 3px 2px rgba($black, 0.024),
             0 7px 5px rgba($black, 0.038),
             0 12px 10px rgba($black, 0.05),
             0 22px 18px rgba($black, 0.062),
             0 42px 32px rgba($black, 0.076),
-            0 80px 60px rgba($black, 0.12)
-        ;
+            0 80px 60px rgba($black, 0.12);
     }
 
     &__item {
         $self: &;
 
-        & + &{
+        &+& {
             border-top: 1px solid $light-grey;
         }
 
-        &--opened {    
+        &--opened {
             #{$self}__icon {
                 transform: rotate(180deg);
             }
@@ -47,11 +56,11 @@
             }
 
             #{$self}__line {
-                background-color: lighten($light-grey, 4%);
+                background-color: transparentize($black, .95);
             }
         }
 
-        &--disabled {    
+        &--disabled {
             #{$self}__line {
                 cursor: initial;
                 background-color: initial;
@@ -72,7 +81,7 @@
             transition: background-color 0.2s ease;
 
             &:hover {
-                background-color: lighten($light-grey, 5%);
+                background-color: transparentize($black, .95);
             }
         }
 

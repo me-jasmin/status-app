@@ -1,13 +1,15 @@
-@import "../static/scss/variables.scss";
+@import "../scss/variables.scss";
 
 #header {
+    display: flex;
+    align-items: center;
     padding: 30px 60px;
     background: $white;
     border-bottom: 1px solid $light-grey;
 
     #main-logo {
         display: inline-block;
-        width: 110px;
+        width: 100px;
 
         &__status-text {
             display: inline-block;
